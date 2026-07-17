@@ -1,19 +1,19 @@
 - name: pl-1
   hosts: drict
   tasks:
-  - name: pl-1and ta-1
-      ansible.builtin.debug:
+  - name: pl-1 and ta-1
+    ansible.builtin.debug:
       msg: "ping the pl-1 and ta-1"
-  -name: pl-1 and ta-2
+  - name: pl-1 and ta-2
     ansible.builtin.debug:
       msg: "ping the pl-1 and ta-2"
 
 - name: pl-2
   hosts: drict
   tasks:
-  - name: pl-2and ta-1
-      ansible.builtin.debug:
+  - name: pl-2 and ta-1
+    ansible.builtin.debug:
       msg: "ping the pl-2 and ta-1"
   - name: pl-2 and ta-2
-      ansible.builtin.debug:
+    ansible.builtin.debug:
       msg: "ping the pl-2 and ta-2"
