@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_prompt:
-    - name:us_name
+    - name: us_name
       prompt: "Enter your us_name"
       private: false
   tasks:
