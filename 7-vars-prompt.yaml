@@ -5,7 +5,10 @@
     - name: us_name
       prompt: "Enter your us_name"
       private: false
+    - name: password
+      prompt: "Enter your password"
+      private: yes
   tasks:
   - name: print the variable
     ansible.builtin.debug:
-      msg: "My us_name is {{ us_name }}"
+      msg: "My us_name is {{ us_name }} and password is {{ password }}"
