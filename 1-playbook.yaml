@@ -1,5 +1,5 @@
-- name:ping the server
-  hosts:drict
+- name: ping the server
+  hosts: drict
   tasks:
-  -name : ping
-   asible.builtin.ping:
+  - name: ping
+    ansible.builtin.ping:
