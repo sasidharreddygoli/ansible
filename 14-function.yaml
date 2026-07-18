@@ -37,7 +37,7 @@
     ansible.builtin.debug:
       msg: "print root pwd: {{ rootpwd.stdout }}"
   - name: Do pathn redirection usig command
-    ansible.builtin.command: ls -lrt > /tmp/output.txt
+    ansible.builtin.command: ls -lrt  /tmp/output.txt
     register: pathredirect
   - name: print the path redirection
     ansible.builtin.debug:
@@ -45,7 +45,7 @@
     ignore_errors: true
 
   - name: Do pathn redirection usig shell
-    ansible.builtin.shell: ls -lrt > /tmp/output.txt
+    ansible.builtin.shell: ls -lrt  /tmp/output.txt
     register: pathredirect
 
   - name: print the path redirection
