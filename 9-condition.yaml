@@ -4,8 +4,8 @@
   vars:
    number: 5
   tasks:
-    - name: print the number
-      ansible.builtin.debug:
-        msg: "The number is {{ number }}"
-      when: number > 8
+  - name: print the number
+    ansible.builtin.debug:
+      msg: "The number is {{ number }}"
+    when: number > 8
     
