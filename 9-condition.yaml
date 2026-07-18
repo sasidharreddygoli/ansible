@@ -1,6 +1,6 @@
-- name: working with condition
+- name: play with condition
   hosts: local
-  collection: local
+  connection: local
   vars:
    number: 5
   tasks:
