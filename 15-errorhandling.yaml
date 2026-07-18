@@ -11,5 +11,5 @@
     ansible.builtin.debug:
       msg: "{{ output }}"
   - name: crete user
-    ansible.builtin.command: useradd sasi
+    ansible.builtin.command: useradd sasid
     when: output.rc != 0
