@@ -1,0 +1,15 @@
+- name: error handiling
+  hosts: local
+  connection: local
+  become: true
+  tasks:
+  - name: find id 
+    ansible.builtin.command: id sasi
+    register: output
+    ignore_errors: yes
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ output }}"
+  - name: crete user
+    ansible.builtin.command: useradd sasi
+    when: output.rc != 0

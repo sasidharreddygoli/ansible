@@ -36,20 +36,6 @@
   - name: print the root pwd
     ansible.builtin.debug:
       msg: "print root pwd: {{ rootpwd}}"
-  - name: Do pathn redirection usig command
-    ansible.builtin.command: "ls -lrt >  /2-nginx.yaml"
-    register: pathredirect
-  - name: print the path redirection
-    ansible.builtin.debug:
-      msg: "print path redirection: {{ pathredirect }}"
-    ignore_errors: true
-
-  - name: Do pathn redirection usig shell
-    ansible.builtin.shell: "ls -lrt > /2-nginx.yaml"
-    register: pathredirect
-
-  - name: print the path redirection
-    ansible.builtin.debug:
-      msg: "print path redirection: {{ pathredirect }}"
+  
 
   
