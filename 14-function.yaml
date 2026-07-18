@@ -42,7 +42,7 @@
   - name: print the path redirection
     ansible.builtin.debug:
       msg: "print path redirection: {{ pathredirect }}"
-    #ignore_errors: true
+    ignore_errors: true
 
   - name: Do pathn redirection usig shell
     ansible.builtin.shell: ls -lrt > /tmp/passwd.txt
