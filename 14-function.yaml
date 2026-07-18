@@ -4,6 +4,8 @@
   become: true
   vars:
     Server: windows,linux,mac
+    name: "My name is reddy"
+    gmail: "SASigk;mxnn@"
     # dict to map
     tags:
       application: phonepay
@@ -18,3 +20,9 @@
   - name: print the dict value
     ansible.builtin.debug:
       msg: "print dict: {{ tags | dict2items }}"
+  - name: convert to upper
+    ansible.builtin.debug:
+      msg: "print upper: {{ name | upper }}"
+  - name: convert to lower
+    ansible.builtin.debug:
+      msg: "print lower: {{ gmail | lower }}"
