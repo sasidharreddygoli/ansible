@@ -6,6 +6,7 @@
     Server: windows,linux,mac
     name: "My name is reddy"
     gmail: "SASigk;mxnn@"
+    ipadd: 172.169.9.0
     # dict to map
     tags:
       application: phonepay
@@ -26,3 +27,6 @@
   - name: convert to lower
     ansible.builtin.debug:
       msg: "print lower: {{ gmail | lower }}"
+  - name: to find valid ip address
+    ansible.builtin.debug: "{{ipadd | ansible.utils.ipv4}}"
+  
