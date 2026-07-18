@@ -6,7 +6,7 @@
     Server: windows,linux,mac
     name: "My name is reddy"
     gmail: "SASigk;mxnn@"
-    ipadd: 172.31.18.203
+    ipadd: 1724.31.18.203
     # dict to map
     tags:
       application: phonepay
