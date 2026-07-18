@@ -6,7 +6,7 @@
   - name: find id 
     ansible.builtin.command: id sasid
     register: output
-    #ignore_errors: yes
+    ignore_errors: yes
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ output }}"
