@@ -1,0 +1,11 @@
+- name: working with condition
+  hosts: local
+  collection: local
+  vars:
+   number: 5
+  tasks:
+    - name: print the number
+      ansible.builtin.debug:
+        msg: "The number is {{ number }}"
+      when: number > 8
+    
