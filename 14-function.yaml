@@ -30,4 +30,11 @@
   - name: to find valid ip address
     ansible.builtin.debug: 
       msg: "print valid ip: {{ipadd | ansible.utils.ipv4}}"
+  - name: find root pwd
+    ansible.builtin.shell: cat /etc/passwd | grep root
+    register: rootpwd
+  - name: print the root pwd
+    ansible.builtin.debug:
+      msg: "print root pwd: {{ rootpwd.stdout }}"
+    
   
