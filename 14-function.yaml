@@ -28,5 +28,6 @@
     ansible.builtin.debug:
       msg: "print lower: {{ gmail | lower }}"
   - name: to find valid ip address
-    ansible.builtin.debug: "{{ipadd | ansible.utils.ipv4}}"
+    ansible.builtin.debug: 
+      msg: "print valid ip: {{ipadd | ansible.utils.ipv4}}"
   
