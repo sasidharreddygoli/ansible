@@ -1,0 +1,20 @@
+- name: playing with functions
+  hosts: local
+  connection: local
+  become: true
+  vars:
+    Server: windows,linux,mac
+    # dict to map
+    tags:
+      application: phonepay
+      pay: amount
+  tasks:
+  - name: print the default value
+    ansible.builtin.debug:
+      msg: "print default: {{name | default('reddy')}}"
+  - name: print the list of servers
+    ansible.builtin.debug:
+      msg: "print list: {{ Server | split(',') }}"
+  - name: print the dict value
+    ansible.builtin.debug:
+      msg: "print dict: {{ tags | dict2items }}"
